@@ -20,8 +20,6 @@ CREATE TABLE colaboradores (
 	cep VARCHAR(8) NOT NULL
 );
 
-
-
 CREATE TABLE fornecedores (
     ID TEXT PRIMARY KEY ,
     Nome VARCHAR(255) NOT NULL,
