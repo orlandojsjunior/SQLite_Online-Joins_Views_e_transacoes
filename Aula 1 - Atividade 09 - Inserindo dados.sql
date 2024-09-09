@@ -1,3 +1,7 @@
+
+-- Aula 1 - Atividade 09 - Inserindo dados
+
+
 INSERT INTO colaboradores (ID, Nome, Cargo, DataContratacao, Telefone, Email, Rua, Bairro, Cidade, Estado, CEP) VALUES
 (1, 'Carlos Silva', 'Gerente', '2022-03-15', '115551234', 'carlos.silva@email.com', 'Rua do Comércio - 258', 'Centro', 'São Paulo', 'SP', '01000001');
 
