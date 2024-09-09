@@ -1,3 +1,5 @@
+-- Aula 1 - Atividade 05 - Criando tabelas
+
 CREATE TABLE produtos (
   id TEXT PRIMARY KEY,
   nome VARCHAR(255),
