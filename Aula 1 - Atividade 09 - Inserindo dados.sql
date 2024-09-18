@@ -98,3 +98,69 @@ INSERT INTO clientes (ID,Nome, Telefone, Endereco) VALUES
 (26, 'Helena Lima', '1315551234', 'Avenida dos Sonhos, 234, Cidade M');
 INSERT INTO clientes (ID,Nome, Telefone, Endereco) VALUES
 (27, 'Paulo Sousa', '1415555678', 'Travessa das Marés, 876, Cidade N');
+
+
+-- Inserindo dados na tabela pedidos
+
+/*
+Vamos abrir uma nova guia clicando no botão de mais (+), também no canto superior direito, para começar a popular a tabela de pedidos.
+ Nesse caso, o processo será um pouco diferente: vamos fazer a importação de um arquivo CSV.
+
+Para importar um arquivo, selecionamos no menu superior a opção "Import". Será aberta uma janela de importação com a mensagem "import file name",
+onde encontraremos a opção "Open" para abrir um diretório do nosso ambiente, isto é, do nosso computador, e selecionar um arquivo.
+
+No disco C:, criamos uma pasta chamada "SQL" com a subpasta "Arquivos", onde adicionamos dois arquivos: Itens de Pedido.csv e Pedidos.csv. 
+Disponibilizaremos esses arquivos para que você possa fazer o seu INSERT nas tabelas. Vamos começar pelo arquivo Pedidos.csv.
+
+Na janela do SQLite Online, será informado o tipo, o nome da tabela, o delimitador, entre outras informações. Porém, 
+o que vai importar para nós são duas opções.
+
+A primeira delas é a "Column name", ou seja, o nome das colunas, que no momento são c1, c2, c3 e c4. 
+Vamos definir esse campo como "First line", isto é, a primeira linha do arquivo enviado. Ao selecionar essa opção, ele automaticamente sobe essas informações.
+
+A segunda definição que nos interessa é a de "Command", onde temos as opções "Run", "Run && Show Code", e "Show Code". 
+Vamos selecionar a última opção, porque não queremos executar, e também não queremos executar e exibir; 
+queremos apenas visualizar essas informações para podermos inserir manualmente na tabela. Após definir isso, podemos clicar em "Ok" no canto inferior direito.
+
+Feito isso, será inserido na nova aba um comando de criação da tabela, ou seja, um CREATE TABLE, e um comando de INSERT INTO, 
+para que possamos realizar a inserção dos dados. Automaticamente, ele faz essa conversão de CSV para comando SQL.
+
+Nesse caso, podemos remover o comando CREATE TABLE, porque já temos a tabela de pedidos criada. 
+Temos os campos ID, IDCliente, DataHoraPedido e Status. Agora vamos executar esse comando.
+
+Ao final, já temos um retorno positivo no histórico de que foi realmente executado. 
+Porém, ainda podemos executar o comando SELECT * FROM pedidos. Dessa fora, teremos todos os pedidos armazenados.
+*/
+
+SELECT * FROM pedidos
+
+
+-- Inserindo dados na tabela itenspedidos
+
+Por último, vamos abrir mais uma vez outra aba, para importar dados para a tabela itenspedidos. 
+Seguiremos os mesmos passos até "Import > Open" e selecionaremos o arquivo Itens de Pedido.csv.
+
+Vamos mudar o nome da tabela para ItensPedidos, que é como está na tabela no SQLite. 
+Além disso, mudaremos a opção em "Column name" para "First line", para pegar a primeira linha conforme fizemos anteriormente. 
+Por fim, em vez de manter "Run" em "Command", vamos colocar também "Show Code".
+
+Da mesma forma, removeremos o comando CREATE TABLE e ajustaremos para o padrão o nome dos campos. 
+Assim, teremos as colunas IDPedido, IDProduto, Quantidade e PrecoUnitario.
+
+Para finalizar, vamos apenas validar uma informação. Na tabela itenspedidos, temos muitas linhas. 
+Sendo assim, provavelmente, foi criado mais de um comando INSERT. Precisamos validar isso antes de executar a inserção dos dados.
+
+Nesse caso, até o item 259 da tabela, temos um comando INSERT, e a partir do 260, outro comando INSERT. 
+Portanto, devemos fazer as alterações dos nomes dos campos também no segundo comando.
+
+Agora vamos selecionar o primeiro comando INSERT e executar. Após fazer isso, podemos selecionar o restante dos dados, 
+que está no segundo comando INSERT, e executar da mesma forma.
+
+Desse modo, temos todos os nossos dados dentro da tabela itenspedidos. 
+Podemos executar o comando SELECT * FROM itenspedidos para visualizar o resultado da tabela populada.
+*/
+
+
+SELECT * FROM itenspedidos
+
+
