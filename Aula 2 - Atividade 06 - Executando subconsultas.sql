@@ -33,3 +33,18 @@ combinando essas duas consultas, pois nome e telefone estão em clientes, enquan
 SELECT nome, telefone FROM clientes
 
 SELECT idcliente FROM pedidos WHERE datahorapedido = '2023-01-02 08:15:00'
+
+/*
+Na primeira consulta, que traz nome e telefone da tabela de clientes, aplicamos um filtro WHERE. Incluímos o campo de ID, 
+pois pretendemos passar esse ID no filtro da comparação, que faz parte da nossa segunda consulta. Podemos copiá-la e colar após o sinal de igual.
+
+Nesta segunda consulta, buscamos o ID da pessoa cliente na tabela de pedidos que fez o pedido em 2 de janeiro de 2023.
+*/
+
+SELECT nome, telefone 
+FROM clientes 
+WHERE ID = (
+    SELECT idcliente 
+    FROM pedidos 
+    WHERE datahorapedido = '2023-01-02 08:15:00')
+
