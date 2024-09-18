@@ -46,5 +46,4 @@ FROM clientes
 WHERE ID = (
     SELECT idcliente 
     FROM pedidos 
-    WHERE datahorapedido = '2023-01-02 08:15:00')
-
+    WHERE datahorapedido = '2023-01-02 08:15:00');
