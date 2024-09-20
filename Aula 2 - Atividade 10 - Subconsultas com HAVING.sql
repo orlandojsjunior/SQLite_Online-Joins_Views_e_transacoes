@@ -42,13 +42,14 @@ esse agrupamento utilizando a função de agregação AVG().
 Então HAVING, incluindo o campo de preço maior que. Agora, aplicamos novamente o recurso da subconsulta, e incorporamos essa subconsulta no HAVING.
 */
 
-SELECT nome,
+SELECT nome, 
     preco
 FROM produtos
 HAVING preco > (
         SELECT AVG (preco)
         FROM produtos
     )
+
 /*
 Executaremos, mas já antecipamos que ocorrerá um erro. E por quê? Porque estamos utilizando o HAVING, que lida com valores agregados, 
 mas não estamos agregando nenhum valor neste caso.
