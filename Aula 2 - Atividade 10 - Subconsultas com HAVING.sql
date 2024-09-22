@@ -66,7 +66,7 @@ GROUP BY nome,
 HAVING preco > (
         SELECT AVG(preco)
         FROM produtos
-    );
+    )
 
 
 /*
