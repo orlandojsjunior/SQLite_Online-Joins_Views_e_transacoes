@@ -33,10 +33,10 @@ Neste caso, se usássemos INNER JOIN, nosso produto não apareceria, mesmo estan
 Mas, ao que se referem as tabelas da direita e esquerda? Antes do RIGHT JOIN, nossa cláusula, temos uma tabela itenspedidos.
 */
 
-SELECT * FROM produtos; 
 
 SELECT *
-FROM itenspedidos RIGHT JOIN produtos;
+FROM itenspedidos 
+RIGHT JOIN produtos;
 
 
 /*
@@ -46,9 +46,6 @@ Após a cláusula JOIN, temos outra chamada produtos. Assim, considerarmos a tab
 Vamos trazer todos os produtos e apenas as linhas que corresponderem à nossa tabela de itenspedidos. 
 Se o retorno for vazio, significa que o produto não tem vendas. É isso que vamos identificar agora. Vamos buscar o nome do nosso produto e o id do produto.
 */
-
-
-SELECT * FROM produtos;
 
 
 SELECT pr.nome, ip.idproduto, ip.idpedido
@@ -73,12 +70,6 @@ O motivo é que a data e a hora do nosso pedido estão em outra tabela, de pedid
 
 SELECT * FROM pedidos;
 
-
-SELECT pr.nome, ip.idproduto, ip.idpedido
-FROM itenspedidos ip
-RIGHT JOIN produtos pr
-ON pr.id = ip.idproduto;
- 
 
 /*
 Precisamos também trazer a nossa tabela de pedidos para a nossa junção. Vamos usar a subconsulta. 
