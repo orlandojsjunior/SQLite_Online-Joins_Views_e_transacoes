@@ -1,4 +1,4 @@
--- Aula 3 - Atividade 02 - INNER JOIN
+.-- INNER JOIN
 
 /*
 Já buscamos informações de colaboradores e fornecedores, assim como informações mais específicas, como a quantidade de clientes que realizaram pedidos em um mês, 
