@@ -17,7 +17,9 @@ e todos os pedidos, não importa se o pedido possui um cliente associado ou não
 
 Primeiro, vamos limpar nossa aba de consulta. Em seguida, executaremos a seguinte consulta: SELECT * FROM clientes. Nossa intenção é unir a tabela de 
 clientes com a de pedidos. Então, faremos o seguinte:
+
 */
+SELECT * FROM clientes;
 
 SELECT c.nome, p.id 
 FROM clientes c
