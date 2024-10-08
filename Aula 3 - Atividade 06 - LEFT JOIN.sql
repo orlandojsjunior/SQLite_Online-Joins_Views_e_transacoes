@@ -109,16 +109,13 @@ LEFT JOIN
     WHERE strftime('%m', p.datahorapedido) = '10')x
 ON c.id = x.idcliente
 WHERE x.idcliente IS NULL;
-
+  
 /*
 Vamos executar. Agora, temos o inverso da nossa primeira consulta: ao invés de obtermos apenas os clientes que têm pedidos, nosso retorno trouxe apenas 
 os clientes que não possuem pedidos. Então, temos "João Pereira", "Pedro Alves", "Ana Maria", enfim, todos esses clientes não realizaram pedidos no mês de outubro.
 
 Para saber dos outros meses, basta trocar o mês da consulta e executar mais uma vez. Agora, além dos produtos, também sabemos quais foram os 
 clientes que não realizaram pedidos. Passando essa informação para a gestão, ela conseguirá trabalhar da melhor forma possível.
-
-Já conhecemos o INNER JOIN, o RIGHT JOIN, e acabamos de conhecer o LEFT JOIN. Mas, existe outro JOIN que podemos utilizar para realizar as nossas consultas 
-e unir os nossos dados que estão em tabelas distintas. Vamos conhecê-lo também!
 */
 
 
