@@ -19,7 +19,7 @@ SELECT * FROM itenspedidos;
 
 
 /*
-Como desejamos o valor total do pedido e precisamos da quantidade e do preço unitário, temos que unir essas duas tabelas utilizando o join. P
+Como desejamos o valor total do pedido e precisamos da quantidade e do preço unitário, temo s que unir essas duas tabelas utilizando o join. P
 ara isso, vamos escrever SELECT * FROM pedidos e usar o join. Quando especificamos apenas join, significa que estamos usando o inner join. 
 Vamos juntá-la com itenspedidos e uni-las pelo campo id.
 
@@ -94,7 +94,7 @@ GROUP BY p.id, c.nome;
 Conseguimos buscar exatamente a informação que precisávamos. Podemos até colocar um alias informando que SUM(ip.precounitario) corresponde a ValorTotalPedido.
 */
 
-SELECT p.id, c.nome, SUM(ip.precounitario) AS ValorTotalPedido
+SELECT p.id, c.nome, SUM(ip.precounitario) AS Valor_Total_Pedido
 FROM clientes c
 JOIN pedidos p ON c.id = p.idcliente
 JOIN itenspedidos ip ON p.id = ip.idpedido
