@@ -1,4 +1,5 @@
 -- Buscando dados com JOIN
+
 -- Durante esta aula conhecemos sobre os JOINs, que combinam colunas de uma ou mais tabelas em um banco de dados relacional.
 
 
@@ -38,5 +39,6 @@ SELECT C.Nome
 SELECT DISTINCT c.Nome, p.IDCliente 
 FROM Clientes c 
 FULL JOIN Pedidos p 
-ON c.ID = p.IDCliente
+ON c.ID = p.IDCliente;
+
 /* Com esta consulta temos o resultado de todos os clientes que possuem ou não pedidos.*/
