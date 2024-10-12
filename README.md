@@ -17,4 +17,4 @@ Nesta formação, você aprenderá a criar e gerenciar bancos de dados e tabelas
 - Implementando views e triggers
 - Como executar transações
 
-### [Documentação SQLite](https://www.sqlite.org/docs.html)
+### **[Documentação SQLite]**(https://www.sqlite.org/docs.html)
