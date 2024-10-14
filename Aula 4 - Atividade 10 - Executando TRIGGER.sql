@@ -61,4 +61,3 @@ acreditamos que os gerentes desse empreendimento ficarão felizes por terem essa
 Além de buscar todas essas informações, precisamos saber montar as consultas e deixar os dados atualizados dentro das tabelas. 
 É o que aprenderemos na sequência!
 */
-
